@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Link com Verdade</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Aprenda a reconhecer links suspeitos e faça escolhas mais conscientes na internet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 14l2 2 4-4"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9L2.4 17.5A2 2 0 0 0 4.1 20.5h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18M4 10h16M12 3l9 5H3l9-5z"/><path d="M6 10v8M10 10v8M14 10v8M18 10v8"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 6a3 3 0 0 0 6 0L5 7zM19 7l-3 6a3 3 0 0 0 6 0l-3-6z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="i-pointer" viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11m0-1.5a1.5 1.5 0 0 1 3 0V11m0-.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.6 15a1.5 1.5 0 0 1 2.4-1.8L9 16"/></symbol>
+</svg>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#inicio" aria-label="Link com Verdade, voltar ao início">
+      <span class="brand-mark" aria-hidden="true"><svg class="icon"><use href="#i-link"/></svg></span>
+      <span>Link com <b>Verdade</b></span>
+    </a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="menu-label">Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Seções da página">
+      <ul class="nav-list">
+        <li><a href="#por-que">Por que importa</a></li>
+        <li><a href="#entenda-url">Entenda uma URL</a></li>
+        <li><a href="#dicas">Dicas</a></li>
+        <li><a class="nav-cta" href="#verificador">Verificador</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- 1. Apresentação -->
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow rise d1">Educação digital para todas as idades</span>
+        <h1 id="hero-title" class="rise d2">Antes de clicar, <span class="underline accent">confira.</span></h1>
+        <p class="lead rise d3">Aprenda a reconhecer links suspeitos e faça escolhas mais conscientes na internet.</p>
+        <div class="hero-actions rise d4">
+          <a class="btn btn-primary" href="#verificador">Conheça o verificador <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
+          <a class="btn btn-ghost" href="#entenda-url">Entenda uma URL</a>
+        </div>
+        <p class="hero-note rise d5"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg> Um segundo de atenção evita muito prejuízo.</p>
+      </div>
+
+      <div class="hero-visual rise d3" role="group" aria-label="Exemplo fictício de mensagem com link suspeito">
+        <figure class="msg">
+          <figcaption class="msg-head">
+            <span class="avatar" aria-hidden="true">?</span>
+            <span><strong>Número desconhecido</strong><small>agora</small></span>
+            <span class="tag">Exemplo fictício</span>
+          </figcaption>
+          <div class="bubble">
+            <p>Última chance! Seu cadastro será <mark>bloqueado hoje</mark>. Regularize agora:</p>
+            <p class="msg-link">https://conta-exemplo.<b>seguro-premio.top</b>/entrar</p>
+          </div>
+        </figure>
+        <ul class="flags" aria-label="O que chama atenção nesta mensagem">
+          <li class="flag"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><span>Pressa para você agir sem pensar</span></li>
+          <li class="flag"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><span>Quem controla o site é <code>seguro-premio.top</code>, não a empresa que você conhece</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Por que a verdade importa -->
+  <section class="band band-white" id="por-que" aria-labelledby="por-que-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Nosso propósito</span>
+        <h2 id="por-que-title">Por que a verdade importa?</h2>
+        <p class="lead">Na internet, uma informação falsa ou um link enganoso se espalham em segundos. Pequenos cuidados protegem você e quem está ao seu redor.</p>
+      </div>
+      <div class="cards-3">
+        <article class="value-card">
+          <span class="value-icon vi-blue" aria-hidden="true"><svg class="icon"><use href="#i-doc"/></svg></span>
+          <h3>Informações confiáveis</h3>
+          <p>Boas decisões dependem de fatos verificados. Antes de acreditar, veja quem publicou e se outras fontes sérias confirmam.</p>
+        </article>
+        <article class="value-card">
+          <span class="value-icon vi-green" aria-hidden="true"><svg class="icon"><use href="#i-shield"/></svg></span>
+          <h3>Cuidado com golpes digitais</h3>
+          <p>Links falsos imitam bancos, lojas e órgãos públicos para roubar senhas e dinheiro. Desconfiar é uma forma de se proteger.</p>
+        </article>
+        <article class="value-card">
+          <span class="value-icon vi-violet" aria-hidden="true"><svg class="icon"><use href="#i-share"/></svg></span>
+          <h3>Responsabilidade ao compartilhar</h3>
+          <p>Cada mensagem encaminhada chega a mais pessoas. Se você não tem certeza de que é verdade, não repasse.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Entenda uma URL -->
+  <section class="band" id="entenda-url" aria-labelledby="url-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Leitura de endereços</span>
+        <h2 id="url-title">Entenda uma URL</h2>
+        <p class="lead">URL é o endereço de uma página na internet. Saber ler cada parte ajuda a descobrir para onde um link leva de verdade.</p>
+      </div>
+
+      <div class="url-stage" id="url-stage">
+        <div class="browser">
+          <div class="browser-top" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="address">
+            <svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>
+            <p class="url" aria-label="Endereço de exemplo: https://conta.exemplo.com/entrar">
+              <span class="seg p-protocol" data-part="protocol" tabindex="0" aria-describedby="part-protocol"><span class="seg-text">https</span><span class="seg-label">Protocolo</span></span>
+              <span class="sep" aria-hidden="true">://</span>
+              <span class="seg p-sub" data-part="sub" tabindex="0" aria-describedby="part-sub"><span class="seg-text">conta</span><span class="seg-label">Subdomínio</span></span>
+              <span class="sep" aria-hidden="true">.</span>
+              <span class="seg p-domain" data-part="domain" tabindex="0" aria-describedby="part-domain"><span class="seg-text">exemplo.com</span><span class="seg-label">Domínio</span></span>
+              <span class="seg p-path" data-part="path" tabindex="0" aria-describedby="part-path"><span class="seg-text">/entrar</span><span class="seg-label">Caminho</span></span>
+            </p>
+          </div>
+        </div>
+
+        <p class="hint"><svg class="icon" aria-hidden="true"><use href="#i-pointer"/></svg> Passe o mouse ou toque em cada parte para destacá-la.</p>
+
+        <div class="parts">
+          <article class="part" data-part="protocol" id="part-protocol">
+            <div class="part-head"><code class="chip p-protocol">https</code><h3>Protocolo</h3></div>
+            <p>É a regra de comunicação entre o navegador e o site. O “s” indica que os dados viajam protegidos no caminho.</p>
+          </article>
+          <article class="part" data-part="sub" id="part-sub">
+            <div class="part-head"><code class="chip p-sub">conta</code><h3>Subdomínio</h3></div>
+            <p>Uma divisão criada pelo dono do site. Golpistas usam esse espaço para imitar marcas, como em <code>banco.site-falso.com</code>.</p>
+          </article>
+          <article class="part" data-part="domain" id="part-domain">
+            <div class="part-head"><code class="chip p-domain">exemplo.com</code><h3>Domínio</h3></div>
+            <p>É a parte mais importante. Fica logo antes da primeira barra <code>/</code> e mostra quem realmente controla o site.</p>
+          </article>
+          <article class="part" data-part="path" id="part-path">
+            <div class="part-head"><code class="chip p-path">/entrar</code><h3>Caminho</h3></div>
+            <p>Indica a página dentro do site. Pode conter qualquer palavra, então “login” ou “seguro” aqui não provam nada.</p>
+          </article>
+        </div>
+
+        <div class="https-callout" role="note">
+          <span class="callout-icon" aria-hidden="true"><svg class="icon"><use href="#i-lock"/></svg></span>
+          <div>
+            <strong>Ter HTTPS não garante que um site seja confiável.</strong>
+            <p>O cadeado mostra que a conexão é protegida, mas não diz quem está do outro lado. Sites falsos também podem ter HTTPS. Confira sempre o domínio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Verificador -->
+  <section class="band band-tint" id="verificador" aria-labelledby="verificador-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Demonstração</span>
+        <h2 id="verificador-title">Verificador de links</h2>
+        <p class="lead">Veja como uma ferramenta poderia ajudar você a pensar antes de clicar, mostrando sinais de atenção e orientações simples.</p>
+      </div>
+
+      <div class="checker">
+        <form class="checker-panel" id="checker-form" novalidate>
+          <p class="demo-notice" role="note">
+            <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>
+            <span>Protótipo demonstrativo. Nenhum endereço é analisado de verdade.</span>
+          </p>
+
+          <div class="field">
+            <label for="link-input">Endereço do link</label>
+            <div class="input-row">
+              <div class="input-wrap">
+                <svg class="icon" aria-hidden="true"><use href="#i-link"/></svg>
+                <input id="link-input" name="link" type="text" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false"
+                  placeholder="https://..." aria-describedby="link-help link-error">
+              </div>
+              <button class="btn btn-primary" type="submit" id="check-btn">
+                <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg> Verificar link
+              </button>
+            </div>
+            <p class="help" id="link-help">Cole ou digite um endereço. O resultado exibido será sempre o mesmo exemplo.</p>
+            <p class="field-error" id="link-error" hidden><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg> Digite um endereço para ver o exemplo de resultado.</p>
+          </div>
+
+          <div class="examples">
+            <span>Experimente com:</span>
+            <button type="button" class="example-chip" data-example="https://conta.exemplo.com/entrar">https://conta.exemplo.com/entrar</button>
+          </div>
+
+          <ul class="checker-steps" aria-label="Como funcionaria na prática">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Você cola o link antes de abrir.</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>A ferramenta mostra sinais que merecem atenção.</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Você decide com mais informação e calma.</span></li>
+          </ul>
+        </form>
+
+        <div class="result-area" aria-live="polite">
+          <div class="placeholder" id="result-placeholder">
+            <span class="ph-icon" aria-hidden="true"><svg class="icon"><use href="#i-search"/></svg></span>
+            <strong>O exemplo de resultado aparece aqui</strong>
+            <p>Digite um endereço e clique em “Verificar link” para ver como o card de orientação funcionaria.</p>
+          </div>
+
+          <article class="result" id="result" hidden aria-labelledby="result-title">
+            <header class="result-head">
+              <span class="tag"><svg class="icon" aria-hidden="true" style="width:14px;height:14px"><use href="#i-info"/></svg> Exemplo de resultado</span>
+              <h3 class="result-title" id="result-title" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg> Sinais de atenção</h3>
+              <p>Resultado fictício e fixo, igual para qualquer endereço. Ele mostra os tipos de alerta que um verificador poderia apresentar.</p>
+            </header>
+            <div class="result-body">
+              <div>
+                <h4>Alertas de exemplo</h4>
+                <ul class="signals">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><div><strong>Domínio parecido com o de uma marca conhecida</strong><span>Ex.: <code>exemp1o.com</code> no lugar de <code>exemplo.com</code>.</span></div></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><div><strong>Linguagem de urgência</strong><span>Frases como “seu acesso será bloqueado hoje”.</span></div></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><div><strong>Pedido de dados pessoais</strong><span>Senhas, códigos de verificação ou dados do cartão.</span></div></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><div><strong>Destino escondido</strong><span>Links encurtados não mostram para onde levam antes do clique.</span></div></li>
+                </ul>
+              </div>
+              <div>
+                <h4>Orientações de cuidado</h4>
+                <ul class="guides">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Não clique por impulso. Confira com calma.</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Acesse digitando o endereço oficial ou pelo aplicativo da organização.</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Nunca informe senhas ou códigos recebidos por mensagem.</span></li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Na dúvida, pergunte a alguém de confiança e não compartilhe.</span></li>
+                </ul>
+              </div>
+            </div>
+            <footer class="result-foot">
+              <p>Este exemplo não indica se o endereço digitado é seguro ou fraudulento.</p>
+              <button type="button" class="btn btn-ghost btn-small" id="reset-btn"><svg class="icon" aria-hidden="true"><use href="#i-reset"/></svg> Testar outro link</button>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Dicas -->
+  <section class="band band-white" id="dicas" aria-labelledby="dicas-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Para guardar</span>
+        <h2 id="dicas-title">Dicas antes de clicar</h2>
+        <p class="lead">Quatro hábitos simples que valem para mensagens, e-mails, redes sociais e anúncios.</p>
+      </div>
+      <div class="tips">
+        <article class="tip">
+          <span class="tip-icon" aria-hidden="true"><svg class="icon"><use href="#i-search"/></svg></span>
+          <div>
+            <h3>Confira a escrita do domínio</h3>
+            <p>Letras trocadas, números no lugar de letras ou palavras a mais indicam imitação. Ex.: <code>exemp<s>1</s>o.com</code>.</p>
+          </div>
+        </article>
+        <article class="tip">
+          <span class="tip-icon" aria-hidden="true"><svg class="icon"><use href="#i-tag"/></svg></span>
+          <div>
+            <h3>Desconfie de ofertas exageradas</h3>
+            <p>Prêmios inesperados, descontos enormes e prazos curtíssimos são iscas comuns para fazer você clicar sem pensar.</p>
+          </div>
+        </article>
+        <article class="tip">
+          <span class="tip-icon" aria-hidden="true"><svg class="icon"><use href="#i-building"/></svg></span>
+          <div>
+            <h3>Procure os canais oficiais da organização</h3>
+            <p>Digite você mesmo o endereço do site ou use o aplicativo oficial, em vez de abrir o link que recebeu.</p>
+          </div>
+        </article>
+        <article class="tip">
+          <span class="tip-icon" aria-hidden="true"><svg class="icon"><use href="#i-scale"/></svg></span>
+          <div>
+            <h3>Compare informações com fontes confiáveis</h3>
+            <p>Veja se a notícia ou a promoção aparece em sites reconhecidos antes de acreditar ou compartilhar.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 6. Rodapé -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <p class="footer-quote">Mais informação, <span>escolhas mais seguras.</span></p>
+    <div class="footer-bottom">
+      <a class="brand" href="#inicio" aria-label="Link com Verdade, voltar ao início">
+        <span class="brand-mark" aria-hidden="true"><svg class="icon"><use href="#i-link"/></svg></span>
+        <span>Link com Verdade</span>
+      </a>
+      <p>Projeto conceitual desenvolvido para um ideathon.</p>
+      <a class="to-top" href="#inicio">Voltar ao topo <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Menu no celular
+  var menuBtn = document.getElementById('menu-btn');
+  var nav = document.getElementById('site-nav');
+  var mq = window.matchMedia('(max-width: 860px)');
+  function setMenu(open) {
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.querySelector('use').setAttribute('href', open ? '#i-close' : '#i-menu');
+    nav.hidden = !open;
+  }
+  function syncNav() { if (mq.matches) setMenu(false); else { nav.hidden = false; menuBtn.setAttribute('aria-expanded', 'false'); } }
+  syncNav();
+  if (mq.addEventListener) mq.addEventListener('change', syncNav);
+  menuBtn.addEventListener('click', function () { setMenu(nav.hidden); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a') && mq.matches) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && mq.matches && !nav.hidden) { setMenu(false); menuBtn.focus(); } });
+
+  // Link ativo no menu
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        links.forEach(function (a) {
+          if (a.getAttribute('href') === '#' + en.target.id) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['inicio', 'por-que', 'entenda-url', 'verificador', 'dicas'].forEach(function (id) {
+      var el = document.getElementById(id); if (el) io.observe(el);
+    });
+  }
+
+  // Destaque das partes da URL
+  var stage = document.getElementById('url-stage');
+  var pinned = null;
+  function activate(part) { if (part) stage.setAttribute('data-active', part); else stage.removeAttribute('data-active'); }
+  stage.querySelectorAll('[data-part]').forEach(function (el) {
+    var part = el.getAttribute('data-part');
+    el.addEventListener('mouseenter', function () { activate(part); });
+    el.addEventListener('mouseleave', function () { activate(pinned); });
+    el.addEventListener('focus', function () { activate(part); });
+    el.addEventListener('blur', function () { activate(pinned); });
+    el.addEventListener('click', function () { pinned = pinned === part ? null : part; activate(pinned); });
+  });
+
+  // Verificador (demonstração com resultado fixo)
+  var form = document.getElementById('checker-form');
+  var input = document.getElementById('link-input');
+  var error = document.getElementById('link-error');
+  var result = document.getElementById('result');
+  var placeholder = document.getElementById('result-placeholder');
+  var resultTitle = document.getElementById('result-title');
+
+  function showResult() {
+    placeholder.hidden = true;
+    result.hidden = true;
+    void result.offsetWidth; // reinicia a animação
+    result.hidden = false;
+    var r = result.getBoundingClientRect();
+    if (r.top < 80 || r.top > window.innerHeight * .7) {
+      result.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    }
+    resultTitle.focus({ preventScroll: true });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!input.value.trim()) {
+      error.hidden = false;
+      input.setAttribute('aria-invalid', 'true');
+      input.focus();
+      return;
+    }
+    error.hidden = true;
+    input.removeAttribute('aria-invalid');
+    showResult();
+  });
+  input.addEventListener('input', function () {
+    if (input.value.trim()) { error.hidden = true; input.removeAttribute('aria-invalid'); }
+  });
+  document.querySelectorAll('.example-chip').forEach(function (b) {
+    b.addEventListener('click', function () {
+      input.value = b.getAttribute('data-example');
+      error.hidden = true; input.removeAttribute('aria-invalid');
+      input.focus();
+    });
+  });
+  document.getElementById('reset-btn').addEventListener('click', function () {
+    result.hidden = true;
+    placeholder.hidden = false;
+    input.value = '';
+    input.focus();
+  });
+})();
+</script>
+</body>
+</html>
