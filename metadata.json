@@ -1,0 +1,8 @@
+{
+  "name": "ControlZ — Verificador de Links",
+  "description": "Plataforma de inteligência e verificação forense de links e URLs para proteção contra phishing e golpes digitais.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

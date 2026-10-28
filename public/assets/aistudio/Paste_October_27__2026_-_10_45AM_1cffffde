@@ -1,0 +1,975 @@
+# CONTROLZ — MASTER PROMPT DE DESIGN, DIREÇÃO DE ARTE E EXPERIÊNCIA DIGITAL
+
+**Projeto:** ControlZ  
+**Categoria:** Plataforma web de detecção de deepfakes e verificação de autenticidade digital  
+**Público-alvo:** Público geral  
+**Escopo:** Aplicação web completa, desenvolvida do zero  
+**Prioridade:** Design, experiência do usuário, identidade visual, animações, arquitetura visual e acabamento profissional  
+**Referências visuais:** Duas imagens fornecidas pelo cliente: uma interface mobile de estética dark com cartões azuis e um site tecnológico com composição cinematográfica azul.
+
+---
+
+# 1. SEU PAPEL
+
+Atue simultaneamente como diretor de arte digital, senior product designer, especialista em UX/UI, motion designer e arquiteto de interfaces frontend.
+
+Sua missão é conceber o ControlZ como um produto digital real, moderno, confiável, visualmente memorável e cuidadosamente construído.
+
+Não se limite a montar uma landing page bonita. Projete uma experiência visual consistente para uma aplicação completa, contemplando a descoberta do produto, a verificação de mídias, a apresentação de resultados, o histórico de análises e as demais áreas necessárias à experiência.
+
+O resultado deve parecer um produto desenvolvido por uma equipe experiente de design e engenharia, e não um template pronto preenchido por uma inteligência artificial.
+
+**O design deve transmitir a sensação de que o ControlZ permite investigar o que está por trás de uma mídia digital e recuperar o controle sobre aquilo em que acreditamos.**
+
+A interface precisa equilibrar três atributos fundamentais:
+
+- **Precisão:** organização visual, informações claras e apresentação cuidadosa das evidências.
+- **Confiança:** linguagem visual séria, transparência sobre incertezas e ausência de promessas exageradas.
+- **Tecnologia:** experiências interativas refinadas, movimento intencional e uma identidade digital contemporânea.
+
+Não copie literalmente as referências. Interprete seus princípios visuais e crie uma linguagem própria para o ControlZ.
+
+# 2. CONCEITO CRIATIVO E IDENTIDADE DA MARCA
+
+## 2.1. Conceito central
+
+O nome ControlZ remete à possibilidade de voltar atrás, revisar algo e reconsiderar o que parecia verdadeiro.
+
+Utilize esse conceito como fundamento da identidade visual.
+
+A direção criativa deve explorar, de maneira sutil e inteligente:
+
+- Revisão e recuperação de informação.
+- Autenticidade versus manipulação.
+- Análise de quadros, sinais e padrões digitais.
+- Rastros visuais, fragmentos e reconstrução de evidências.
+- A diferença entre aquilo que uma mídia aparenta ser e aquilo que uma análise consegue indicar.
+
+Esses elementos devem aparecer na composição, na iconografia, nas transições e na organização dos dados.
+
+Evite representar o conceito de maneira literal demais. Não transforme toda a interface em uma sequência de imagens de rostos artificiais, olhos digitais, cérebros de IA ou hologramas.
+
+O objetivo é criar uma identidade que seja reconhecível mesmo sem o logotipo.
+
+## 2.2. Personalidade
+
+O ControlZ deve parecer:
+
+- Inteligente, sem ser pretensioso.
+- Tecnológico, sem parecer ficção científica.
+- Sofisticado, sem ser excessivamente corporativo.
+- Acessível, sem parecer um aplicativo infantil.
+- Investigativo, sem criar uma atmosfera excessivamente sombria ou ameaçadora.
+- Moderno, sem depender de tendências visuais passageiras.
+
+A experiência deve funcionar tanto para alguém que deseja verificar um vídeo recebido em uma rede social quanto para alguém que queira compreender os resultados de uma análise com mais profundidade.
+
+## 2.3. Assinatura visual
+
+Desenvolva uma identidade baseada na combinação de:
+
+1. Superfícies escuras com profundidade controlada.
+2. Azul elétrico utilizado como acento funcional.
+3. Azul atmosférico em áreas específicas de destaque.
+4. Elementos gráficos inspirados em quadros, varreduras e sinais digitais.
+5. Tipografia expressiva, equilibrada por uma interface altamente legível.
+6. Animações funcionais que reforcem a sensação de análise e descoberta.
+
+O design deve ter personalidade própria, mesmo quando os gradientes, os efeitos luminosos e as animações estiverem desativados.
+
+# 3. ANÁLISE DAS REFERÊNCIAS VISUAIS
+
+As referências são fontes de direção artística, não modelos a serem reproduzidos.
+
+## Referência 1 — Interface mobile dark
+
+A primeira imagem apresenta um aplicativo com fundo grafite, cartões de bordas arredondadas, hierarquia tipográfica simples, organização modular e azul vibrante em elementos de destaque.
+
+Aplique esses princípios em:
+
+- Painéis de análise.
+- Cartões de resultados.
+- Histórico de mídias verificadas.
+- Indicadores de estado.
+- Controles de upload.
+- Áreas de resumo e detalhamento.
+- Componentes adaptados para dispositivos móveis.
+
+Preserve a clareza visual da referência, mas evite reproduzir a aparência genérica de um dashboard de saúde ou bem-estar.
+
+A interface do ControlZ deve incorporar padrões visuais específicos da análise de autenticidade digital.
+
+## Referência 2 — Site tecnológico cinematográfico
+
+A segunda imagem apresenta um fundo azul profundo, uma composição central expressiva, padrões geométricos repetidos, iluminação atmosférica e tipografia com contraste editorial.
+
+Aplique esses princípios principalmente em:
+
+- Hero da página inicial.
+- Apresentação da proposta do produto.
+- Seções editoriais sobre autenticidade digital.
+- Demonstrações visuais do funcionamento da plataforma.
+- Transições entre seções.
+- Elementos de identidade e assinatura visual.
+
+Explore a relação entre escuridão e iluminação, profundidade e geometria, movimento e tipografia.
+
+Não reproduza o desenho específico dos símbolos, a estrutura exata da página ou a composição original. Crie um sistema gráfico exclusivo para o ControlZ, inspirado em sinais, quadros, recortes, linhas de análise e fragmentos de informação.
+
+## Síntese das referências
+
+O site deve unir a força visual e a profundidade cinematográfica da segunda imagem à clareza, à modularidade e à usabilidade da primeira.
+
+A página inicial pode ser mais expressiva. As telas operacionais devem privilegiar clareza, foco e precisão.
+
+Essa diferença deve ser intencional e consistente em toda a aplicação.
+
+# 4. DIREÇÃO DE ARTE
+
+## 4.1. Paleta cromática
+
+Utilize a seguinte paleta inicial como ponto de partida. Ajuste os valores durante a composição, caso necessário, preservando a identidade geral.
+
+### Cores fundamentais
+
+- **Background principal:** `#080B12`
+- **Background secundário:** `#0D1220`
+- **Superfície elevada:** `#141B29`
+- **Superfície alternativa:** `#1B2434`
+- **Bordas discretas:** `#273247`
+- **Texto principal:** `#F3F6FC`
+- **Texto secundário:** `#A2AEC2`
+- **Texto terciário:** `#727F94`
+- **Azul de destaque:** `#3478F6`
+- **Azul luminoso:** `#5AA2FF`
+- **Azul profundo:** `#123C8D`
+
+Use tons de azul para chamar a atenção para ações, estados ativos, elementos interativos e informações relevantes.
+
+Não pinte toda a interface de azul. O contraste entre as superfícies escuras, o conteúdo claro e os acentos deve produzir uma hierarquia compreensível.
+
+### Cores semânticas
+
+Defina cores auxiliares para representar:
+
+- Resultado inconclusivo.
+- Possíveis sinais de manipulação.
+- Análise concluída.
+- Erros de processamento.
+- Avisos.
+- Estados de carregamento.
+
+Cores como verde, amarelo e vermelho podem aparecer quando tiverem uma função semântica clara. Evite usá-las apenas para decorar os cartões.
+
+Os estados nunca devem depender exclusivamente da cor. Combine cor, texto e iconografia.
+
+## 4.2. Fundos e profundidade
+
+O fundo não deve ser uma superfície preta totalmente uniforme em todas as telas.
+
+Utilize diferentes níveis de profundidade conforme a necessidade:
+
+- Superfícies foscas para áreas de trabalho.
+- Gradientes atmosféricos discretos em áreas de destaque.
+- Padrões geométricos de baixa intensidade em determinados contextos.
+- Bordas sutis para separar elementos interativos.
+- Sombras controladas para criar uma hierarquia espacial.
+- Iluminação azul localizada, especialmente em elementos ativos.
+
+Não use o mesmo efeito de fundo em todas as seções.
+
+A página inicial, a área de upload e os resultados devem possuir tratamentos próprios, mantendo coerência com o design system.
+
+Evite blur excessivo, glassmorphism indiscriminado, partículas aleatórias, brilho neon em todos os componentes e gradientes que não tenham função visual definida.
+
+## 4.3. Tipografia
+
+Utilize uma tipografia sans-serif contemporânea para a maior parte da interface.
+
+Famílias como Geist, Inter ou Manrope podem servir como ponto de partida, desde que o resultado tenha boa legibilidade e consistência.
+
+Crie uma hierarquia tipográfica clara para:
+
+- Headline principal.
+- Títulos de seção.
+- Títulos de páginas internas.
+- Títulos de cartões.
+- Métricas e indicadores.
+- Corpo de texto.
+- Etiquetas.
+- Metadados.
+- Mensagens de estado.
+- Texto auxiliar.
+
+Explore diferenças de peso, tamanho, largura e espaçamento para produzir expressividade.
+
+A referência do site Lumina também utiliza um contraste editorial entre tipografia sem serifa e palavras com tratamento serifado. Essa estratégia pode inspirar um detalhe pontual na página inicial, desde que agregue identidade e não prejudique a legibilidade.
+
+Não transforme a interface inteira em uma composição editorial. As telas operacionais devem ser objetivas e fáceis de compreender.
+
+Evite fontes futuristas excessivamente estilizadas, títulos exageradamente comprimidos, letras espaçadas em todos os componentes e textos minúsculos usados apenas para simular sofisticação.
+
+## 4.4. Geometria e iconografia
+
+Desenvolva uma linguagem geométrica derivada de conceitos como:
+
+- Quadros de vídeo.
+- Recortes e regiões de interesse.
+- Linhas de varredura.
+- Marcas de enquadramento.
+- Segmentos de sinais.
+- Padrões de comparação.
+- Delimitação de áreas analisadas.
+
+Utilize esses elementos de modo seletivo e reconhecível.
+
+Adote ícones consistentes, preferencialmente vetoriais e com uma única linguagem de traço.
+
+Não misture ícones outline, emojis, ilustrações 3D, símbolos de diferentes bibliotecas e pictogramas aleatórios.
+
+A iconografia deve parecer parte de um único sistema visual.
+
+# 5. DIRETRIZES CONTRA DESIGN GENÉRICO DE IA
+
+Esta seção é obrigatória e deve orientar todas as decisões de design.
+
+Antes de finalizar qualquer tela, avalie se ela apresenta características de um template genérico.
+
+## 5.1. Elementos proibidos quando usados sem justificativa
+
+- Hero genérico com título central, subtítulo vago e dois botões convencionais.
+- Gradiente azul aplicado em todas as seções.
+- Grandes áreas de glassmorphism sem função.
+- Fileiras de cartões idênticos repetidas por toda a página.
+- Ícones de cérebro, robôs ou circuitos usados para simbolizar qualquer funcionalidade.
+- Painéis flutuantes decorativos que não correspondem a uma função real.
+- Elementos pseudo técnicos compostos por números aleatórios.
+- Gráficos inventados apresentados como evidências científicas.
+- Palavras como “revolucionário”, “redefina o futuro” ou “poder da IA” em textos vazios.
+- Animações chamativas que não ajudam a compreender o produto.
+- Círculos luminosos, partículas e linhas neon usados exclusivamente para preencher o espaço.
+- Layouts excessivamente simétricos, sem ritmo ou hierarquia.
+- Seções copiadas de templates SaaS sem relação com a proposta do ControlZ.
+- Uso repetitivo de cards com a mesma estrutura, tamanho e densidade informacional.
+
+Esses recursos não são absolutamente proibidos, mas precisam justificar sua presença por meio da identidade, da usabilidade ou da comunicação.
+
+## 5.2. Como produzir um design original
+
+Construa a interface a partir da natureza do produto.
+
+Crie composições baseadas na análise de uma mídia, na comparação de quadros, na apresentação de evidências e na compreensão de resultados.
+
+Varie os layouts conforme a necessidade de cada conteúdo.
+
+Uma seção pode usar composição editorial; outra, uma demonstração visual ampla; outra, uma interface modular; outra, uma área de texto e evidências com hierarquia técnica.
+
+A originalidade deve vir da composição, não da acumulação de efeitos.
+
+Implemente pelo menos três recursos visuais próprios do ControlZ que se repitam de maneira consistente no site, sem se tornarem elementos decorativos excessivos.
+
+## 5.3. Teste de qualidade visual
+
+Antes de concluir, faça uma revisão crítica e responda:
+
+1. O produto seria reconhecível sem o logotipo?
+2. A interface parece específica para verificação de autenticidade?
+3. Os elementos decorativos contribuem para a compreensão?
+4. A página possui ritmo visual e variação de composição?
+5. Os cartões têm tamanhos e estruturas justificados por suas funções?
+6. O resultado continua sofisticado sem gradientes e brilhos?
+7. A interface parece um produto real, não um conceito visual vazio?
+8. É possível identificar imediatamente a ação principal?
+9. Os estados de análise são compreensíveis sem conhecimento técnico?
+10. O design mantém personalidade própria em telas pequenas?
+
+Se a interface parecer um template SaaS genérico, revise sua composição antes de avançar.
+
+# 6. ARQUITETURA DA APLICAÇÃO
+
+Projete o ControlZ como uma aplicação web completa, não como uma landing page isolada.
+
+A organização abaixo é uma proposta de arquitetura visual. Ajuste o número de páginas apenas quando houver uma justificativa real de experiência do usuário.
+
+## 6.1. Página inicial pública
+
+Objetivo: apresentar a proposta de valor e conduzir o visitante à experiência principal.
+
+Elementos:
+
+- Navegação principal.
+- Identidade ControlZ.
+- Headline original e objetiva.
+- Explicação breve sobre verificação de autenticidade.
+- Ação principal para começar uma verificação.
+- Demonstração visual do processo.
+- Seção sobre como funciona.
+- Apresentação dos tipos de mídia efetivamente contemplados pelo produto.
+- Seção sobre interpretação dos resultados e limitações.
+- Perguntas frequentes.
+- Rodapé completo.
+
+Evite uma página inicial formada apenas por título, cartões de funcionalidades e depoimentos artificiais.
+
+Construa uma narrativa visual: primeiro apresente o problema, depois a proposta do ControlZ, em seguida a experiência de verificação e, finalmente, os limites e a utilidade do resultado.
+
+Não invente depoimentos, clientes, prêmios, resultados de desempenho ou estatísticas de confiabilidade.
+
+## 6.2. Área de verificação
+
+Esta é uma das áreas mais importantes da aplicação.
+
+Desenvolva uma interface dedicada à seleção e ao envio de uma mídia para análise.
+
+Considere:
+
+- Área de upload destacada.
+- Suporte visual a arrastar e soltar.
+- Botão para selecionar um arquivo.
+- Pré-visualização do conteúdo selecionado.
+- Nome, formato e tamanho do arquivo.
+- Remoção e substituição do arquivo.
+- Informações sobre formatos e limites aceitos, quando definidos.
+- Ação principal para iniciar a verificação.
+- Explicação concisa sobre privacidade e processamento.
+- Estados de erro e de arquivo inválido.
+
+A área de upload deve ser atraente, mas funcionalmente clara.
+
+Não exija que o usuário compreenda termos como análise forense, metadados ou artefatos de geração para iniciar uma verificação.
+
+## 6.3. Etapa de análise
+
+Desenhe uma experiência visual de processamento que seja coerente com a marca.
+
+Possíveis elementos:
+
+- Linha temporal de progresso.
+- Animação de varredura aplicada à pré-visualização.
+- Indicador de etapa atual.
+- Transições entre fases.
+- Feedback de progresso quando houver dados reais.
+- Mensagens para espera, cancelamento e falha.
+
+Uma sequência visual pode apresentar etapas como preparação da mídia, processamento e consolidação do resultado, desde que essas etapas correspondam ao funcionamento real ou estejam identificadas como etapas demonstrativas do protótipo.
+
+Não simule uma precisão científica inexistente com animações de números aleatórios ou porcentagens inventadas.
+
+Se não houver integração real de detecção, a interface deve utilizar estados demonstrativos claramente identificados.
+
+## 6.4. Página de resultados
+
+O resultado precisa ser fácil de entender para o público geral.
+
+Projete uma hierarquia com:
+
+1. Identificação da mídia analisada.
+2. Síntese do resultado.
+3. Explicação em linguagem simples.
+4. Indicadores disponíveis e devidamente contextualizados.
+5. Evidências ou regiões relevantes, quando fornecidas pela análise.
+6. Limitações da avaliação.
+7. Ações para examinar detalhes, realizar nova análise ou retornar ao histórico.
+
+Considere estados distintos para:
+
+- Indícios de manipulação detectados.
+- Nenhum indício relevante identificado pela ferramenta.
+- Resultado inconclusivo.
+- Falha no processamento.
+- Arquivo não suportado.
+- Resultado indisponível.
+
+Nunca apresente “nenhum indício encontrado” como prova de autenticidade.
+
+Não confunda a probabilidade de uma classificação do modelo com a probabilidade de que uma mídia seja verdadeira.
+
+Não invente resultados, porcentagens, evidências, regiões manipuladas ou explicações técnicas. Todo indicador deve corresponder a uma informação real ou estar explicitamente identificado como demonstração.
+
+## 6.5. Histórico de verificações
+
+Crie uma página para consultar verificações anteriores.
+
+Considere:
+
+- Miniatura da mídia, quando disponível e apropriado.
+- Nome do arquivo.
+- Data da verificação.
+- Estado de processamento.
+- Resumo do resultado.
+- Pesquisa e filtros relevantes.
+- Acesso ao relatório detalhado.
+- Estados vazio, carregando e erro.
+
+Explore uma apresentação adequada tanto para poucos itens quanto para grandes quantidades de registros.
+
+Não obrigue o usuário a percorrer uma grade de cartões gigantes para encontrar um resultado anterior. A densidade visual deve ser proporcional à tarefa.
+
+## 6.6. Relatório detalhado
+
+Crie uma visão detalhada de cada verificação.
+
+Ela poderá incluir:
+
+- Informações da mídia.
+- Resumo interpretável.
+- Indicadores utilizados.
+- Evidências visuais disponíveis.
+- Avisos sobre limitações.
+- Data e estado da análise.
+- Acesso ao conteúdo original, quando permitido.
+- Exportação do relatório, caso faça parte do escopo funcional.
+
+Diferencie claramente fatos fornecidos pelo processamento, inferências produzidas pelo modelo e orientações gerais.
+
+Não apresente elementos decorativos como se fossem provas técnicas.
+
+## 6.7. Metodologia e compreensão dos resultados
+
+Desenvolva uma área que explique, de maneira acessível, como a plataforma aborda a análise de autenticidade.
+
+Ela deve ajudar o público a compreender:
+
+- O que são deepfakes.
+- O que uma ferramenta de detecção consegue avaliar.
+- Como interpretar um resultado.
+- Por que podem existir falsos positivos e falsos negativos.
+- Por que uma análise isolada não constitui prova definitiva.
+- Quais limitações precisam ser consideradas.
+
+O design pode ser mais editorial nessa seção, mantendo a identidade visual do produto.
+
+## 6.8. Conta e preferências
+
+Caso o produto tenha autenticação, projete telas para:
+
+- Cadastro.
+- Login.
+- Recuperação de acesso.
+- Preferências da conta.
+- Privacidade e retenção de dados.
+- Encerramento de sessão.
+- Estados de erro e confirmação.
+
+Não transforme a aplicação em um painel com inúmeras áreas sem necessidade. Priorize uma estrutura simples, consistente e fácil de navegar.
+
+## 6.9. Navegação global
+
+Desenvolva uma navegação que corresponda ao contexto.
+
+Em telas públicas, use uma navegação institucional concisa.
+
+Nas áreas operacionais, considere uma sidebar compacta ou uma estrutura equivalente em desktop, com versão adaptada para dispositivos menores.
+
+A navegação deve indicar a página atual, manter acesso fácil à ação principal e evitar excesso de categorias.
+
+No mobile, considere navegação inferior ou menu compacto somente se isso melhorar a usabilidade.
+
+Não utilize uma navegação idêntica em todos os contextos por conveniência estética.
+
+# 7. ESTRUTURA DA PÁGINA INICIAL
+
+Crie uma narrativa visual com ritmo e intenção.
+
+## Seção 1 — Hero
+
+A primeira dobra deve apresentar o ControlZ de maneira marcante.
+
+Desenvolva uma composição própria, explorando o contraste entre fundo escuro, tipografia expressiva e um elemento visual central relacionado à verificação de mídias.
+
+O elemento principal pode ser uma interface de análise, uma sequência de quadros ou uma composição gráfica que represente a inspeção de conteúdo digital.
+
+Evite o padrão genérico de laptop flutuante acompanhado de cartões aleatórios.
+
+A mensagem principal deve explicar o benefício do produto em linguagem natural.
+
+Sugestão de direção para a headline:
+
+“Nem tudo o que parece real é.”
+
+Essa frase é apenas uma referência de copywriting. Desenvolva a versão final para que seja clara, original e compatível com a proposta do produto.
+
+A ação principal deve conduzir à verificação. Uma ação secundária pode apresentar o funcionamento da plataforma.
+
+## Seção 2 — Demonstração visual
+
+Mostre como uma mídia entra na experiência e como um resultado pode ser apresentado.
+
+Crie uma composição com começo, meio e fim, usando recursos visuais próprios do ControlZ.
+
+Essa demonstração deve ser compreensível sem exigir que o visitante leia um texto longo.
+
+Quando não houver processamento real, identifique os dados apresentados como demonstração.
+
+## Seção 3 — Como funciona
+
+Apresente o processo por meio de etapas visualmente conectadas.
+
+Varie a composição entre ícones, imagens, textos curtos e fragmentos de interface.
+
+Evite três cartões idênticos com um ícone no topo e uma frase genérica abaixo.
+
+## Seção 4 — Interpretação dos resultados
+
+Mostre como a interface comunica resultados, incertezas e limitações.
+
+Essa seção é essencial para transmitir confiança, pois o ControlZ precisa demonstrar que entende as limitações das ferramentas de detecção.
+
+## Seção 5 — Recursos principais
+
+Apresente apenas os recursos previstos para o produto.
+
+Use layouts diferentes quando as funcionalidades tiverem importâncias distintas.
+
+## Seção 6 — Confiança, privacidade e limites
+
+Comunique o tratamento de arquivos e dados de forma direta.
+
+Não prometa privacidade absoluta, exclusão automática, processamento local ou ausência de armazenamento sem que isso seja confirmado pela implementação real.
+
+## Seção 7 — Encerramento e rodapé
+
+Conduza o visitante de volta à ação principal.
+
+Inclua links de navegação, informações legais e páginas de privacidade conforme o escopo do produto.
+
+Não prolongue a página com seções repetitivas apenas para aumentar sua extensão.
+
+# 8. SISTEMA DE LAYOUT E COMPOSIÇÃO
+
+Defina um sistema de layout consistente antes de produzir as telas.
+
+## 8.1. Grid
+
+Utilize uma estrutura responsiva com colunas, margens e espaçamentos claramente definidos.
+
+Em desktop, explore uma largura de conteúdo confortável, com áreas amplas para composições expressivas e áreas mais compactas para leitura e análise.
+
+Não deixe textos longos espalhados por toda a largura da tela.
+
+Utilize colunas assimétricas quando isso ajudar a estabelecer hierarquia visual.
+
+## 8.2. Espaçamento
+
+Crie uma escala consistente de espaçamentos e aplique-a aos componentes.
+
+Evite diferenças arbitrárias entre elementos semelhantes.
+
+O ritmo vertical deve ajudar a distinguir blocos de conteúdo sem fazer a interface parecer vazia ou excessivamente compacta.
+
+## 8.3. Bordas e cantos
+
+Utilize uma escala limitada de raios de borda.
+
+Cartões operacionais podem ter cantos arredondados, como na primeira referência, mas não devem parecer balões excessivamente arredondados.
+
+Reserve formas mais expressivas para componentes que realmente mereçam destaque.
+
+## 8.4. Densidade informacional
+
+A densidade deve variar de acordo com a tarefa.
+
+- Landing page: espaço para narrativa, identidade e impacto visual.
+- Upload: foco e área de interação evidente.
+- Processamento: conteúdo reduzido e feedback claro.
+- Resultado: hierarquia explícita entre conclusão, evidências e limitações.
+- Histórico: densidade suficiente para comparação e consulta.
+- Preferências: simplicidade e agrupamento lógico.
+
+Não force o mesmo layout de cards em páginas com necessidades diferentes.
+
+# 9. ANIMAÇÕES E MOTION DESIGN
+
+As animações são parte fundamental da identidade do ControlZ.
+
+Elas devem reforçar a sensação de inspeção, precisão e transformação de informação.
+
+Não devem ser utilizadas apenas para tornar a interface visualmente movimentada.
+
+## 9.1. Princípios
+
+- Movimento com propósito.
+- Transições curtas e suaves na interface operacional.
+- Movimentos mais expressivos, porém controlados, na página inicial.
+- Continuidade entre estados.
+- Feedback imediato para as ações.
+- Consistência entre componentes.
+- Respeito à preferência por movimento reduzido.
+
+## 9.2. Hero
+
+Explore animações discretas de linhas, quadros ou padrões geométricos próprios da marca.
+
+Possibilidades:
+
+- Linhas de análise se revelando gradualmente.
+- Elementos geométricos sendo organizados.
+- Destaques luminosos percorrendo áreas específicas.
+- Parallax sutil em camadas de profundidade.
+- Entrada tipográfica sequencial.
+- Transição entre fragmentos visuais.
+
+Evite um fundo repleto de partículas aleatórias ou um efeito de brilho contínuo ocupando toda a tela.
+
+A mensagem deve continuar legível e o elemento principal deve permanecer claramente identificado.
+
+## 9.3. Upload
+
+Implemente feedback visual para:
+
+- Hover.
+- Foco por teclado.
+- Arquivo arrastado sobre a área.
+- Arquivo selecionado.
+- Validação.
+- Remoção do arquivo.
+- Início do processamento.
+
+A área de upload deve responder de forma previsível às ações do usuário.
+
+## 9.4. Processamento
+
+Utilize o movimento para representar estados reais ou etapas demonstrativas claramente identificadas.
+
+Uma varredura pode percorrer a pré-visualização da mídia. Indicadores podem mudar de estado quando uma etapa for efetivamente concluída.
+
+Não utilize animações que simulem a descoberta de evidências inexistentes.
+
+## 9.5. Transições e microinterações
+
+Defina padrões de movimento para:
+
+- Abertura e fechamento de menus.
+- Expansão de detalhes.
+- Navegação entre páginas.
+- Seleção de filtros.
+- Atualização de estados.
+- Exibição de mensagens.
+- Carregamento de cartões.
+- Confirmação de ações.
+
+Evite animações de entrada repetitivas em todos os elementos.
+
+Não faça o usuário esperar por uma transição puramente decorativa para conseguir interagir.
+
+## 9.6. Restrições de movimento
+
+Respeite `prefers-reduced-motion`.
+
+Evite efeitos que provoquem desconforto, movimentos bruscos, parallax excessivo ou animações contínuas desnecessárias.
+
+Mantenha a interface utilizável quando o movimento estiver reduzido ou desativado.
+
+# 10. DESIGN SYSTEM
+
+Construa um sistema visual reutilizável para garantir consistência em todas as páginas.
+
+Defina tokens para:
+
+- Cores.
+- Tipografia.
+- Espaçamentos.
+- Raios de borda.
+- Sombras.
+- Camadas de elevação.
+- Larguras de conteúdo.
+- Breakpoints.
+- Durações de animação.
+- Curvas de transição.
+- Estados de interação.
+
+Implemente componentes consistentes para:
+
+- Botões primários e secundários.
+- Campos de formulário.
+- Área de upload.
+- Navegação.
+- Cartões de mídia.
+- Cartões de resultado.
+- Etiquetas de estado.
+- Indicadores de processamento.
+- Tabelas ou listas de histórico.
+- Tooltips.
+- Modais.
+- Menus.
+- Alertas.
+- Mensagens de erro.
+- Skeletons.
+- Estados vazios.
+- Paginação, quando necessária.
+
+Cada componente deve possuir estados adequados de repouso, hover, foco, pressionado, desabilitado, carregando e erro, quando aplicáveis.
+
+Não crie uma biblioteca visual tão rígida que todas as telas acabem com a mesma aparência. O design system deve manter consistência sem eliminar a diversidade de composição.
+
+# 11. RESPONSIVIDADE
+
+Projete a experiência para desktop, tablet e dispositivos móveis.
+
+A adaptação deve considerar mudanças reais de layout, e não apenas reduzir o tamanho dos elementos.
+
+## Desktop
+
+Priorize composições expressivas na página inicial, espaço suficiente para análise e uma navegação operacional eficiente.
+
+## Tablet
+
+Reorganize colunas, cartões e barras laterais conforme necessário.
+
+Evite componentes comprimidos que conservem uma estrutura inadequada para a largura disponível.
+
+## Mobile
+
+Priorize:
+
+- Leitura em uma única coluna quando apropriado.
+- Áreas de toque confortáveis.
+- Textos com tamanhos legíveis.
+- Upload acessível.
+- Navegação simplificada.
+- Resultados organizados em uma sequência compreensível.
+- Menor densidade informacional.
+- Animações leves.
+- Ausência de rolagem horizontal indevida.
+
+Considere que o público poderá acessar o ControlZ por um link recebido em um aplicativo de mensagens e utilizar a plataforma imediatamente pelo celular.
+
+A experiência principal precisa funcionar bem nesse contexto.
+
+# 12. UX, ACESSIBILIDADE E CONFIANÇA
+
+A interface deve transmitir confiança sem induzir o usuário a interpretar um resultado probabilístico como uma certeza absoluta.
+
+## 12.1. Linguagem
+
+Utilize português brasileiro natural, direto e compreensível.
+
+Explique termos técnicos quando forem necessários.
+
+Evite excesso de jargões, palavras vagas e mensagens que pareçam propaganda.
+
+## 12.2. Acessibilidade
+
+Implemente:
+
+- Contraste adequado entre texto e fundo.
+- Navegação integral por teclado.
+- Indicadores de foco visíveis.
+- Labels para controles e formulários.
+- Textos alternativos para imagens informativas.
+- Estados comunicados por texto e iconografia, não apenas por cor.
+- Estrutura semântica apropriada.
+- Mensagens de erro compreensíveis.
+- Áreas de toque adequadas.
+- Compatibilidade com leitores de tela.
+- Respeito à preferência por movimento reduzido.
+
+Busque conformidade com WCAG 2.2 nível AA, verificando os critérios aplicáveis.
+
+Não utilize texto de baixo contraste ou tipografia pequena apenas para obter uma aparência sofisticada.
+
+## 12.3. Transparência
+
+Os resultados devem diferenciar:
+
+- O que foi observado pela ferramenta.
+- O que foi inferido pelo sistema.
+- O que permanece incerto.
+- O que não foi possível verificar.
+
+Evite rótulos absolutos como “100% real” ou “deepfake confirmado” se o método de análise não sustentar essa afirmação.
+
+O design precisa permitir que o usuário compreenda as limitações sem transformar toda a experiência em um aviso jurídico.
+
+## 12.4. Privacidade
+
+As informações sobre envio, processamento, armazenamento e exclusão de mídias devem refletir o comportamento real do produto.
+
+Não invente garantias de segurança, exclusão automática ou processamento confidencial.
+
+Privacidade deve ser compreensível e estar acessível no momento em que o usuário precisa tomar uma decisão.
+
+# 13. ESTADOS E CASOS DE BORDA
+
+Não projete apenas as telas ideais.
+
+Considere a experiência completa diante de situações reais:
+
+- Nenhum arquivo selecionado.
+- Arquivo selecionado.
+- Formato não permitido.
+- Arquivo excedendo o limite.
+- Arquivo corrompido.
+- Conexão instável.
+- Processamento demorado.
+- Processamento concluído.
+- Análise inconclusiva.
+- Falha de processamento.
+- Histórico vazio.
+- Histórico com muitos itens.
+- Pesquisa sem resultados.
+- Erro de autenticação.
+- Sessão expirada.
+- Erro ao carregar um relatório.
+- Usuário tentando sair durante uma operação.
+
+Cada estado precisa ter hierarquia visual, mensagem adequada e ação seguinte claramente identificável.
+
+Não utilize o mesmo alerta genérico para problemas diferentes.
+
+As mensagens devem explicar o que ocorreu e o que o usuário pode fazer a seguir.
+
+# 14. CONTEÚDO E ELEMENTOS VISUAIS
+
+Todo o conteúdo deve sustentar a proposta do ControlZ.
+
+Utilize textos reais de interface, evitando placeholders genéricos como “Lorem ipsum”, “Feature One” e “Your content here”.
+
+Não invente informações técnicas, estatísticas de precisão, números de usuários, avaliações, depoimentos ou parcerias.
+
+As demonstrações visuais devem ser explicitamente identificadas como demonstrativas sempre que os dados não forem provenientes de uma análise real.
+
+Evite utilizar rostos de pessoas reais como elementos decorativos sem necessidade.
+
+Prefira construir a identidade com composições gráficas, quadros, regiões de análise, formas abstratas e exemplos de interface.
+
+Quando imagens reais forem necessárias para demonstrar uma funcionalidade, utilize materiais apropriados e preserve a clareza do contexto.
+
+# 15. REQUISITOS DE IMPLEMENTAÇÃO VISUAL
+
+O projeto será criado do zero.
+
+A prioridade é a camada visual e a experiência de uso da aplicação.
+
+Caso o trabalho seja realizado por um agente de desenvolvimento:
+
+- Estruture as páginas e os componentes de maneira organizada.
+- Utilize um sistema reutilizável de design tokens.
+- Mantenha a identidade consistente entre rotas.
+- Desenvolva layouts responsivos.
+- Implemente as interações visuais necessárias ao protótipo.
+- Utilize dados demonstrativos apenas quando devidamente identificados.
+- Evite dependências desnecessárias.
+- Garanta que todos os elementos interativos possuam estados e respostas visuais coerentes.
+- Não simule uma funcionalidade real de detecção sem um mecanismo que efetivamente a execute.
+- Não apresente processamento demonstrativo como análise científica real.
+
+A camada visual deve estar preparada para uma futura integração com serviços de análise, mas a existência de uma interface não deve ser confundida com a implementação de um detector.
+
+Se houver decisões técnicas ainda não definidas, priorize uma arquitetura visual flexível, sem inventar serviços, APIs ou requisitos de infraestrutura.
+
+# 16. PERFORMANCE E QUALIDADE DE EXECUÇÃO
+
+O design precisa ser viável, responsivo e eficiente.
+
+Evite:
+
+- Animações pesadas e desnecessárias.
+- Grandes imagens não otimizadas.
+- Efeitos de blur em excesso.
+- Reprocessamento visual desnecessário.
+- Bibliotecas incluídas apenas por conveniência estética.
+- Elementos animados que prejudiquem o desempenho em dispositivos modestos.
+
+Priorize transições performáticas, carregamento progressivo de imagens e animações que não comprometam a interação.
+
+O resultado deve permanecer fluido em navegadores modernos e em dispositivos de diferentes capacidades.
+
+# 17. PROCESSO DE TRABALHO
+
+Siga esta sequência antes de considerar o trabalho concluído.
+
+## Etapa 1 — Interpretação
+
+Analise as duas referências, identifique os princípios visuais relevantes e traduza-os para a identidade do ControlZ.
+
+Defina quais características pertencem à página inicial e quais devem permanecer nas telas operacionais.
+
+## Etapa 2 — Arquitetura visual
+
+Organize o mapa de páginas, os fluxos principais e a hierarquia das informações.
+
+Defina como o usuário passa da entrada no produto à verificação, ao entendimento do resultado e ao acesso ao histórico.
+
+## Etapa 3 — Direção de arte
+
+Estabeleça paleta, tipografia, composição, iconografia, fundos, padrões gráficos e princípios de animação.
+
+Crie recursos visuais distintivos que possam ser reutilizados com consistência.
+
+## Etapa 4 — Design system
+
+Defina os tokens, componentes e estados que serão utilizados em todas as telas.
+
+## Etapa 5 — Construção das telas
+
+Desenvolva a experiência completa, incluindo estados operacionais, casos de erro e adaptações para diferentes dispositivos.
+
+## Etapa 6 — Revisão crítica
+
+Analise cada tela de forma independente e também como parte de uma única experiência.
+
+Corrija inconsistências de espaçamento, hierarquia, contraste, animação, composição, navegação e comportamento responsivo.
+
+## Etapa 7 — Auditoria contra design genérico
+
+Revise o resultado utilizando todos os critérios da seção 5.
+
+Se qualquer tela parecer um template genérico de IA, redesenhe-a com base nas necessidades específicas do produto.
+
+Não considere o trabalho finalizado somente porque as páginas estão completas. A qualidade da execução visual é parte essencial da entrega.
+
+# 18. CRITÉRIOS DE ACEITAÇÃO
+
+O resultado será considerado satisfatório somente se cumprir os seguintes requisitos:
+
+**Identidade**
+- O ControlZ possui uma assinatura visual própria.
+- A identidade é consistente entre páginas públicas e operacionais.
+- As referências foram reinterpretadas sem cópia literal.
+- A estética tecnológica não depende de clichês visuais.
+
+**Experiência**
+- O fluxo de verificação é facilmente compreendido.
+- Os resultados apresentam hierarquia informacional clara.
+- Os estados de erro e de ausência de dados estão contemplados.
+- A navegação funciona de forma coerente em todas as áreas.
+
+**Design**
+- Existe variação intencional de composição entre seções.
+- A tipografia possui uma hierarquia consistente.
+- O azul é utilizado estrategicamente.
+- As animações melhoram a percepção e a compreensão.
+- Os componentes são visualmente consistentes.
+
+**Responsividade**
+- A experiência funciona em desktop, tablet e mobile.
+- Os componentes se reorganizam de forma apropriada.
+- A interação principal é acessível em telas pequenas.
+
+**Acessibilidade e confiança**
+- O contraste e a navegação por teclado são adequados.
+- Os resultados não induzem a certezas injustificadas.
+- As demonstrações são identificadas corretamente.
+- As alegações sobre privacidade e funcionamento são verificáveis.
+
+**Qualidade final**
+- O produto não parece um template genérico.
+- Não existem elementos decorativos sem propósito.
+- Não existem controles aparentes sem comportamento definido no protótipo.
+- A interface apresenta acabamento cuidadoso em estados normais e excepcionais.
+- O conjunto parece uma aplicação profissional de um produto digital real.
+
+# 19. DIRETRIZ FINAL
+
+Crie o ControlZ como uma plataforma visualmente autoral que combina a atmosfera cinematográfica azul das referências com a clareza de uma aplicação moderna e a precisão visual de uma ferramenta de investigação digital.
+
+A página inicial deve provocar interesse. A área de verificação deve inspirar confiança. O resultado deve ser compreensível. O histórico deve ser eficiente. As animações devem ter propósito. Cada componente precisa pertencer à mesma linguagem visual.
+
+Não escolha o caminho mais fácil apenas porque ele é comum em templates de SaaS.
+
+Não adicione efeitos para compensar uma composição fraca.
+
+Não use complexidade como sinônimo de sofisticação.
+
+**A meta não é criar apenas um site bonito sobre deepfakes. É construir uma identidade digital distinta, uma experiência coerente e uma interface que transmita precisão, transparência e confiança em cada interação.**

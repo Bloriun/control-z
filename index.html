@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ControlZ — Verificador de Links</title>
+  <meta name="description" content="Descubra em segundos se um link recebido no WhatsApp, SMS ou e-mail é seguro ou tentativa de golpe.">
+  <meta property="og:title" content="ControlZ — Verificador de Links">
+  <meta property="og:description" content="Descubra em segundos se um link recebido no WhatsApp, SMS ou e-mail é seguro ou tentativa de golpe.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            royal: {
+              50: '#EFF6FF',
+              100: '#DBEAFE',
+              200: '#BFDBFE',
+              300: '#93C5FD',
+              400: '#60A5FA',
+              500: '#3B82F6',
+              600: '#2563EB',
+              700: '#1D4ED8',
+              800: '#1E40AF',
+              900: '#1E3A8A',
+            },
+            deep: {
+              950: '#05070B',
+              900: '#080B11',
+              850: '#0D131F',
+              800: '#121A2B',
+              700: '#1E293B',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-deep-900 text-slate-100 font-sans antialiased selection:bg-royal-600 selection:text-white">
+
+  <div id="scroll-progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-royal-500 via-royal-400 to-emerald-400 z-50 transition-all duration-150" style="width: 0%"></div>
+
+  <header class="border-b border-royal-600/20 bg-deep-950/90 backdrop-blur-xl sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#verificador" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 bg-royal-600/15 border border-royal-500/40 rounded-xl flex items-center justify-center text-royal-400 shadow-[0_0_20px_rgba(37,99,235,0.25)]">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="font-extrabold tracking-tight text-xl text-white">
+            Control<span class="text-royal-500">Z</span>
+          </span>
+          <p class="text-[11px] text-slate-400 font-medium -mt-1">Verificador de Links para Todos</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+        <a href="#verificador" class="hover:text-royal-400 transition-colors flex items-center gap-1.5">
+          <i data-lucide="search" class="w-4 h-4 text-royal-400"></i>
+          <span>Verificar Link</span>
+        </a>
+        <a href="#golpes-comuns" class="hover:text-royal-400 transition-colors flex items-center gap-1.5">
+          <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400"></i>
+          <span>Golpes Comuns</span>
+        </a>
+        <a href="#o-que-fazer" class="hover:text-royal-400 transition-colors flex items-center gap-1.5">
+          <i data-lucide="life-buoy" class="w-4 h-4 text-emerald-400"></i>
+          <span>Clicou por Engano?</span>
+        </a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Gratuito & Imediato</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-16">
+
+    <section id="verificador" class="text-center space-y-6 pt-2">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-royal-600/10 border border-royal-500/30 text-xs font-semibold text-royal-300">
+        <i data-lucide="shield" class="w-3.5 h-3.5 text-royal-400"></i>
+        <span>Proteja seu WhatsApp, contas de banco e dinheiro</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight max-w-3xl mx-auto">
+        Recebeu um link estranho? <br class="hidden sm:inline">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-royal-400 to-sky-300">Veja se é golpe antes de clicar</span>
+      </h1>
+
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Cole o endereço da mensagem para descobrir na hora se é uma página falsa feita para roubar suas senhas ou seu Pix.
+      </p>
+
+      <div class="max-w-3xl mx-auto glass-card rounded-2xl p-5 sm:p-7 specular-border text-left relative overflow-hidden">
+        <div id="laser-line" class="laser-scanner-line"></div>
+
+        <form id="url-form" onsubmit="event.preventDefault(); window.analisarUrl();" class="space-y-4">
+          <label for="url-input" class="block text-xs font-bold uppercase tracking-wider text-slate-300">
+            Cole o link recebido por WhatsApp, SMS ou e-mail:
+          </label>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div class="relative flex-1">
+              <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                <i data-lucide="link" class="w-5 h-5 text-royal-400"></i>
+              </div>
+              <input 
+                type="text" 
+                id="url-input" 
+                class="w-full glass-input rounded-xl pl-11 pr-10 py-3.5 text-white placeholder-slate-500 text-base font-mono" 
+                placeholder="Exemplo: https://promo-pix-premio.xyz"
+                required
+                autocomplete="off"
+                spellcheck="false"
+              >
+              <button 
+                type="button" 
+                id="clear-btn" 
+                onclick="window.limparInput()" 
+                class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-white transition-colors"
+                title="Limpar texto"
+              >
+                <i data-lucide="x" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+            <button 
+              type="submit" 
+              id="analyze-btn" 
+              class="btn-royal-primary px-6 py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer text-base"
+            >
+              <i data-lucide="search" class="w-5 h-5"></i>
+              <span>Verificar Agora</span>
+            </button>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-2 pt-1 text-xs text-slate-400">
+            <div class="flex flex-wrap items-center gap-1.5">
+              <span class="text-slate-400 font-medium">Ou teste um exemplo:</span>
+              <button type="button" onclick="window.carregarExemplo('https://nubank-premio-pix-resgate.xyz')" class="px-2.5 py-1 rounded-lg bg-red-950/60 border border-red-500/30 text-red-300 hover:bg-red-900/50 transition-colors">
+                🔴 Falso Pix
+              </button>
+              <button type="button" onclick="window.carregarExemplo('http://whatsapp-atualizacao-segura.site')" class="px-2.5 py-1 rounded-lg bg-red-950/60 border border-red-500/30 text-red-300 hover:bg-red-900/50 transition-colors">
+                🔴 Falso WhatsApp
+              </button>
+              <button type="button" onclick="window.carregarExemplo('https://correios-taxa-alfandega.online')" class="px-2.5 py-1 rounded-lg bg-amber-950/60 border border-amber-500/30 text-amber-300 hover:bg-amber-900/50 transition-colors">
+                🟡 Falso Correios
+              </button>
+              <button type="button" onclick="window.carregarExemplo('https://www.mercadolivre.com.br')" class="px-2.5 py-1 rounded-lg bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-900/50 transition-colors">
+                🟢 Mercado Livre Real
+              </button>
+            </div>
+            <button type="button" onclick="window.colarClipboard()" class="text-royal-400 hover:text-royal-300 underline flex items-center gap-1">
+              <i data-lucide="clipboard" class="w-3.5 h-3.5"></i>
+              <span>Colar do Celular</span>
+            </button>
+          </div>
+        </form>
+
+        <div id="loading-state" class="hidden py-10 text-center space-y-3">
+          <div class="w-10 h-10 border-3 border-royal-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+          <p class="text-base font-semibold text-slate-200">Consultando bancos de segurança...</p>
+          <p class="text-xs text-slate-400">Verificando se o endereço finge ser outra empresa.</p>
+        </div>
+
+        <div id="result-box" class="hidden mt-6 pt-6 border-t border-slate-700/60 space-y-5">
+          <div id="verdict-banner" class="p-5 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div class="flex items-start gap-4">
+              <div id="verdict-icon-container" class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"></div>
+              <div>
+                <span id="verdict-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider inline-block mb-1"></span>
+                <h2 id="verdict-title" class="text-xl sm:text-2xl font-extrabold leading-tight"></h2>
+                <p id="verdict-subtitle" class="text-sm mt-1"></p>
+              </div>
+            </div>
+            <div class="text-left sm:text-right shrink-0 bg-black/20 p-3 rounded-xl sm:bg-transparent sm:p-0">
+              <p class="text-xs text-slate-400 font-medium">Nível de Confiança</p>
+              <p id="verdict-score" class="text-3xl font-extrabold"></p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-deep-850/80 border border-slate-700/60 space-y-3">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                <i data-lucide="info" class="w-4 h-4 text-royal-400"></i>
+                <span>Por que esse resultado?</span>
+              </h3>
+              <ul id="verdict-reasons" class="text-sm text-slate-200 space-y-2 list-none"></ul>
+            </div>
+
+            <div class="p-4 rounded-xl bg-deep-850/80 border border-slate-700/60 space-y-3">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                <span>O que você deve fazer agora:</span>
+              </h3>
+              <div id="verdict-action" class="text-sm space-y-2"></div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+            <div class="text-xs text-slate-400">
+              <span>Site testado: </span>
+              <strong id="verdict-url-display" class="font-mono text-white"></strong>
+            </div>
+            <div class="flex items-center gap-2">
+              <button 
+                type="button" 
+                id="btn-copy-alert" 
+                onclick="window.copiarAlertaWhatsapp()" 
+                class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center gap-2 transition-colors cursor-pointer"
+              >
+                <i data-lucide="share-2" class="w-4 h-4"></i>
+                <span>Copiar Alerta para o WhatsApp</span>
+              </button>
+              <button 
+                type="button" 
+                onclick="window.limparInput()" 
+                class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors cursor-pointer"
+              >
+                Testar Outro Link
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="golpes-comuns" class="space-y-6">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+          Os 3 Golpes Mais Comuns Hoje
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Entenda como os golpistas tentam enganar você e sua família no dia a dia.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="glass-card rounded-2xl p-6 space-y-4 hover:border-royal-500/50 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-red-600/15 border border-red-500/30 flex items-center justify-center text-red-400">
+            <i data-lucide="gift" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span class="text-xs font-bold text-red-400 uppercase tracking-wider">Golpe #1</span>
+            <h3 class="text-lg font-bold text-white mt-1">O Falso Pix ou Brinde Grátis</h3>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Mensagens no WhatsApp dizendo: <em>"Você ganhou R$ 500 no Pix"</em> ou <em>"Responda a pesquisa e ganhe uma cafeteira"</em>.
+          </p>
+          <div class="p-3 rounded-xl bg-deep-900 border border-slate-800 text-xs text-slate-300 space-y-1">
+            <strong class="text-amber-400 block">Como funciona a armadilha:</strong>
+            O site pede para você pagar uma taxa de frete ou liberação de R$ 30 a R$ 90 via Pix. Você paga e o prêmio nunca existe.
+          </div>
+          <div class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+            <i data-lucide="check" class="w-4 h-4"></i>
+            Regra: Ninguém dá dinheiro de graça na internet.
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 space-y-4 hover:border-royal-500/50 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-amber-600/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <i data-lucide="user-x" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Golpe #2</span>
+            <h3 class="text-lg font-bold text-white mt-1">Falso Parente ou Voz Clonada (Deepfake)</h3>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Mensagem de número novo dizendo: <em>"Mãe, troquei de celular, me manda R$ 400 urgente para pagar uma conta"</em>.
+          </p>
+          <div class="p-3 rounded-xl bg-deep-900 border border-slate-800 text-xs text-slate-300 space-y-1">
+            <strong class="text-amber-400 block">Como funciona a armadilha:</strong>
+            Eles pegam a foto da pessoa no Instagram ou usam inteligência artificial para clonar a voz e mandar áudios idênticos.
+          </div>
+          <div class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+            <i data-lucide="check" class="w-4 h-4"></i>
+            Regra: Ligue para o número antigo antes de transferir.
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 space-y-4 hover:border-royal-500/50 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-royal-600/15 border border-royal-500/30 flex items-center justify-center text-royal-400">
+            <i data-lucide="credit-card" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span class="text-xs font-bold text-royal-400 uppercase tracking-wider">Golpe #3</span>
+            <h3 class="text-lg font-bold text-white mt-1">Falso SMS de Banco ou Correios</h3>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Mensagem de texto dizendo: <em>"Compra aprovada de R$ 3.890. Se não foi você, clique no link para cancelar"</em>.
+          </p>
+          <div class="p-3 rounded-xl bg-deep-900 border border-slate-800 text-xs text-slate-300 space-y-1">
+            <strong class="text-amber-400 block">Como funciona a armadilha:</strong>
+            O link leva a uma página idêntica à do seu banco que pede sua senha de 4 ou 6 dígitos e token de segurança.
+          </div>
+          <div class="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+            <i data-lucide="check" class="w-4 h-4"></i>
+            Regra: Bancos nunca mandam link para cancelar compra.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="o-que-fazer" class="glass-card rounded-2xl p-6 sm:p-8 specular-border space-y-6">
+      <div class="flex items-start sm:items-center justify-between gap-4 flex-col sm:flex-row border-b border-slate-700/60 pb-5">
+        <div>
+          <span class="px-2.5 py-1 rounded-full bg-red-950/80 border border-red-500/30 text-red-300 text-xs font-bold uppercase tracking-wider">
+            Plano de Emergência
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-2">
+            Clicou sem querer num link perigoso? Faça isso agora:
+          </h2>
+          <p class="text-slate-300 text-sm mt-1">
+            Mantenha a calma. Siga estes 4 passos simples na ordem para proteger suas contas:
+          </p>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-red-600/10 border border-red-500/30 flex items-center justify-center text-red-400 shrink-0">
+          <i data-lucide="shield-alert" class="w-7 h-7"></i>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-4 rounded-xl bg-deep-850 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-royal-600 text-white font-black text-sm flex items-center justify-center">1</div>
+          <h3 class="font-bold text-white text-base">Desligue a Internet</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Ative o <strong>Modo Avião</strong> ou desligue o Wi-Fi e dados móveis do celular na hora. Isso impede que o vírus termine de baixar.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-deep-850 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-royal-600 text-white font-black text-sm flex items-center justify-center">2</div>
+          <h3 class="font-bold text-white text-base">Ligue para o Banco</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Se você digitou senha ou enviou Pix, ligue para o telefone do verso do cartão e peça o bloqueio preventivo (MED do Banco Central).
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-deep-850 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-royal-600 text-white font-black text-sm flex items-center justify-center">3</div>
+          <h3 class="font-bold text-white text-base">Troque as Senhas</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Use outro celular ou computador para mudar a senha do seu e-mail principal, WhatsApp e redes sociais.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-deep-850 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-royal-600 text-white font-black text-sm flex items-center justify-center">4</div>
+          <h3 class="font-bold text-white text-base">Avise os Amigos</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Avise sua família e amigos para não atenderem pedidos de dinheiro caso alguém tente mandar mensagem em seu nome.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-xl sm:text-2xl font-extrabold text-white">
+          As 3 Regras de Ouro para Nunca Cair em Golpe
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm">
+          Guarde estas dicas no bolso e compartilhe com quem você ama:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-xl bg-deep-900 border border-slate-800 space-y-2">
+          <div class="flex items-center gap-2 text-royal-400 font-bold text-sm">
+            <i data-lucide="eye" class="w-5 h-5"></i>
+            <span>1. Olhe o final do endereço</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            O site oficial termina em <strong>.com.br</strong> ou <strong>.com</strong>. Golpistas usam finais estranhos como <strong>.xyz, .top, .site, .online</strong>.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-deep-900 border border-slate-800 space-y-2">
+          <div class="flex items-center gap-2 text-royal-400 font-bold text-sm">
+            <i data-lucide="clock" class="w-5 h-5"></i>
+            <span>2. Desconfie da urgência</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Frases como <em>"Últimas 2 horas"</em> ou <em>"Sua conta será cancelada agora"</em> são feitas para você não pensar e agir por desespero.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-deep-900 border border-slate-800 space-y-2">
+          <div class="flex items-center gap-2 text-royal-400 font-bold text-sm">
+            <i data-lucide="phone-call" class="w-5 h-5"></i>
+            <span>3. Confirme ligando</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Se seu filho ou amigo pedir dinheiro no WhatsApp com número novo, faça uma chamada com vídeo para ver o rosto dele antes de mandar Pix.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="historico" class="space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+          <i data-lucide="history" class="w-4 h-4 text-royal-400"></i>
+          <span>Links que você verificou hoje</span>
+        </h3>
+        <button type="button" onclick="window.limparHistorico()" class="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+          Limpar lista
+        </button>
+      </div>
+
+      <div class="glass-card rounded-xl p-4 overflow-hidden">
+        <div id="historico-lista" class="space-y-2 text-xs text-slate-400">
+          <p class="text-center py-4 text-slate-500">Nenhum link verificado ainda. Digite um link no topo para começar.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800 bg-deep-950 py-8 text-center text-xs text-slate-500 space-y-2">
+    <div class="flex items-center justify-center gap-2 text-slate-400 font-semibold">
+      <i data-lucide="shield-check" class="w-4 h-4 text-royal-500"></i>
+      <span>ControlZ — Proteção Digital Simples e Direta</span>
+    </div>
+    <p>Criado para proteger o dia a dia de cidadãos e famílias contra fraudes na internet.</p>
+  </footer>
+
+  <script>
+    let scanHistory = [];
+    let lastResult = null;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        const bar = document.getElementById('scroll-progress-bar');
+        if (bar) bar.style.width = scrolled + '%';
+      });
+    });
+
+    window.limparInput = function() {
+      const input = document.getElementById('url-input');
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
+      document.getElementById('result-box').classList.add('hidden');
+    };
+
+    window.carregarExemplo = function(url) {
+      const input = document.getElementById('url-input');
+      if (input) {
+        input.value = url;
+        window.analisarUrl();
+      }
+    };
+
+    window.colarClipboard = async function() {
+      try {
+        if (navigator.clipboard && navigator.clipboard.readText) {
+          const text = await navigator.clipboard.readText();
+          if (text) {
+            document.getElementById('url-input').value = text.trim();
+            window.analisarUrl();
+            return;
+          }
+        }
+      } catch (e) {
+      }
+      const sample = prompt('Cole aqui o link que você copiou:');
+      if (sample) {
+        document.getElementById('url-input').value = sample.trim();
+        window.analisarUrl();
+      }
+    };
+
+    function extrairInfoUrl(rawUrl) {
+      let urlStr = rawUrl.trim();
+      if (!/^https?:\/\//i.test(urlStr)) {
+        urlStr = 'https://' + urlStr;
+      }
+      try {
+        const parsed = new URL(urlStr);
+        return {
+          valida: true,
+          original: rawUrl,
+          hostname: parsed.hostname.toLowerCase(),
+          pathname: parsed.pathname,
+          protocol: parsed.protocol.replace(':', '')
+        };
+      } catch (err) {
+        return {
+          valida: false,
+          original: rawUrl,
+          hostname: rawUrl.toLowerCase(),
+          pathname: '',
+          protocol: 'http'
+        };
+      }
+    }
+
+    const DOMINIOS_CONFIADOS = [
+      'google.com', 'google.com.br', 'gov.br', 'bb.com.br', 'caixa.gov.br',
+      'itau.com.br', 'bradesco.com.br', 'santander.com.br', 'nubank.com.br',
+      'mercadolivre.com.br', 'mercadopago.com.br', 'magazineluiza.com.br',
+      'amazon.com.br', 'correios.com.br', 'whatsapp.com', 'instagram.com',
+      'facebook.com', 'youtube.com', 'netflix.com', 'globo.com', 'uol.com.br'
+    ];
+
+    const PALAVRAS_DE_GOLPE = [
+      'pix', 'premio', 'resgate', 'recadastro', 'bloqueio', 'urgente',
+      'promocao', 'gratis', 'brinde', 'taxa', 'alfandega', 'atualizacao',
+      'seguranca', 'login-seguro', 'cancelamento', 'sacar', 'beneficio'
+    ];
+
+    const TERMINACOES_PERIGOSAS = [
+      '.xyz', '.top', '.online', '.site', '.club', '.buzz', '.vip', '.work', '.click', '.tk', '.ga'
+    ];
+
+    window.analisarUrl = function() {
+      const input = document.getElementById('url-input');
+      const rawUrl = input ? input.value.trim() : '';
+
+      if (!rawUrl) {
+        input.focus();
+        return;
+      }
+
+      const laser = document.getElementById('laser-line');
+      if (laser) laser.classList.add('active');
+
+      const loading = document.getElementById('loading-state');
+      const resultBox = document.getElementById('result-box');
+      loading.classList.remove('hidden');
+      resultBox.classList.add('hidden');
+
+      setTimeout(() => {
+        executarAnalise(rawUrl);
+        if (laser) laser.classList.remove('active');
+        loading.classList.add('hidden');
+        resultBox.classList.remove('hidden');
+        resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 550);
+    };
+
+    function executarAnalise(rawUrl) {
+      const info = extrairInfoUrl(rawUrl);
+      const host = info.hostname;
+
+      let confianca = 50;
+      let motivos = [];
+      let acoes = [];
+      let ehGolpe = false;
+      let ehSeguro = false;
+
+      const ehOficial = DOMINIOS_CONFIADOS.some(d => host === d || host.endsWith('.' + d));
+
+      if (ehOficial) {
+        confianca = 100;
+        ehSeguro = true;
+        motivos.push('Pertence oficialmente a uma empresa ou instituição pública autêntica e verificada.');
+        motivos.push('O endereço do site corresponde exatamente ao domínio legítimo cadastrado.');
+        acoes.push('Pode navegar com segurança.');
+        acoes.push('Lembre-se sempre de conferir o cadeado no seu navegador.');
+      } else {
+        const imitaMarca = DOMINIOS_CONFIADOS.some(d => {
+          const nomeMarca = d.split('.')[0];
+          return host.includes(nomeMarca) && !host.endsWith(d);
+        });
+
+        if (imitaMarca) {
+          confianca = 5;
+          ehGolpe = true;
+          motivos.push('IMPRESSÃO FALSA: O endereço usa o nome de uma empresa famosa (como banco ou loja), mas o site real NÃO pertence a ela.');
+        }
+
+        const temPalavraGolpe = PALAVRAS_DE_GOLPE.filter(p => host.includes(p) || info.pathname.includes(p));
+        if (temPalavraGolpe.length > 0) {
+          confianca = Math.max(0, confianca - 35);
+          motivos.push('Termos típicos de golpe detectados no endereço: "' + temPalavraGolpe.join('", "') + '".');
+        }
+
+        const temTerminacaoEstranha = TERMINACOES_PERIGOSAS.some(t => host.endsWith(t));
+        if (temTerminacaoEstranha) {
+          confianca = Math.max(0, confianca - 30);
+          motivos.push('Extensão de risco (.xyz, .top, .online, etc.): muito usada por criminosos porque custa centavos para criar e não exige documento.');
+        }
+
+        if (info.protocol === 'http') {
+          confianca = Math.max(0, confianca - 20);
+          motivos.push('Não usa conexão segura criptografada (sem cadeado HTTPS).');
+        }
+
+        if (host.split('.').length > 4) {
+          confianca = Math.max(0, confianca - 15);
+          motivos.push('Endereço longo e confuso com múltiplos pontos para disfarçar o destino real.');
+        }
+
+        if (confianca <= 35) {
+          ehGolpe = true;
+          acoes.push('NÃO CLIQUE e NÃO coloque nenhuma senha ou número de cartão.');
+          acoes.push('NÃO faça transferências Pix nem pague taxas de liberação.');
+          acoes.push('Apague a mensagem recebida e avise a pessoa que te enviou.');
+        } else if (confianca <= 70) {
+          motivos.push('Este site não possui histórico de confiança ou é muito recente.');
+          acoes.push('Abra apenas se tiver absoluta certeza de quem enviou.');
+          acoes.push('Nunca digite senhas de banco ou códigos recebidos por SMS.');
+        } else {
+          ehSeguro = true;
+          motivos.push('Não encontramos sinais óbvios de golpe, mas mantenha a atenção básica.');
+          acoes.push('Acesse apenas o que você solicitou.');
+        }
+      }
+
+      atualizarInterface(info, confianca, ehGolpe, ehSeguro, motivos, acoes);
+    }
+
+    function atualizarInterface(info, confianca, ehGolpe, ehSeguro, motivos, acoes) {
+      const banner = document.getElementById('verdict-banner');
+      const iconCont = document.getElementById('verdict-icon-container');
+      const badge = document.getElementById('verdict-badge');
+      const title = document.getElementById('verdict-title');
+      const subtitle = document.getElementById('verdict-subtitle');
+      const score = document.getElementById('verdict-score');
+      const reasonsList = document.getElementById('verdict-reasons');
+      const actionDiv = document.getElementById('verdict-action');
+      const urlDisplay = document.getElementById('verdict-url-display');
+
+      urlDisplay.textContent = info.hostname;
+
+      reasonsList.innerHTML = motivos.map(m => `
+        <li class="flex items-start gap-2">
+          <span class="text-royal-400 mt-0.5">•</span>
+          <span>${m}</span>
+        </li>
+      `).join('');
+
+      actionDiv.innerHTML = acoes.map(a => `
+        <div class="flex items-start gap-2 font-medium">
+          <span class="${ehGolpe ? 'text-red-400' : 'text-emerald-400'}">✓</span>
+          <span class="text-slate-100">${a}</span>
+        </div>
+      `).join('');
+
+      banner.className = 'p-5 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all ';
+
+      let statusNome = '';
+
+      if (ehGolpe) {
+        statusNome = 'GOLPE';
+        banner.className += 'bg-red-950/80 border-2 border-red-500/60 shadow-[0_0_30px_rgba(239,68,68,0.25)]';
+        iconCont.className = 'w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center shrink-0 shadow-lg';
+        iconCont.innerHTML = '<i data-lucide="alert-octagon" class="w-7 h-7"></i>';
+        badge.className = 'px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-red-600 text-white';
+        badge.textContent = 'ALERTA MÁXIMO DE GOLPE';
+        title.className = 'text-xl sm:text-2xl font-black text-white';
+        title.textContent = 'Cuidado! Este link é uma armadilha';
+        subtitle.className = 'text-sm text-red-200';
+        subtitle.textContent = 'Página falsa criada para roubar dados, senhas ou exigir dinheiro via Pix.';
+        score.className = 'text-3xl font-black text-red-400';
+        score.textContent = 'Risco 99%';
+      } else if (ehSeguro) {
+        statusNome = 'SEGURO';
+        banner.className += 'bg-emerald-950/80 border-2 border-emerald-500/60 shadow-[0_0_30px_rgba(16,185,129,0.2)]';
+        iconCont.className = 'w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-lg';
+        iconCont.innerHTML = '<i data-lucide="shield-check" class="w-7 h-7"></i>';
+        badge.className = 'px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-emerald-600 text-white';
+        badge.textContent = 'LINK SEGURO & OFICIAL';
+        title.className = 'text-xl sm:text-2xl font-black text-white';
+        title.textContent = 'Link Confiável';
+        subtitle.className = 'text-sm text-emerald-200';
+        subtitle.textContent = 'Este endereço pertence a um serviço oficial registrado e reconhecido.';
+        score.className = 'text-3xl font-black text-emerald-400';
+        score.textContent = '100% Seguro';
+      } else {
+        statusNome = 'SUSPEITO';
+        banner.className += 'bg-amber-950/80 border-2 border-amber-500/60 shadow-[0_0_30px_rgba(245,158,11,0.2)]';
+        iconCont.className = 'w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center shrink-0 shadow-lg';
+        iconCont.innerHTML = '<i data-lucide="alert-triangle" class="w-7 h-7"></i>';
+        badge.className = 'px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-amber-600 text-white';
+        badge.textContent = 'ATENÇÃO: LINK SUSPEITO';
+        title.className = 'text-xl sm:text-2xl font-black text-white';
+        title.textContent = 'Proceda com Cautela';
+        subtitle.className = 'text-sm text-amber-200';
+        subtitle.textContent = 'Não foi possível confirmar quem é o dono deste link. Não informe dados confidenciais.';
+        score.className = 'text-3xl font-black text-amber-400';
+        score.textContent = 'Risco Médio';
+      }
+
+      lastResult = {
+        url: info.original,
+        status: statusNome,
+        host: info.hostname,
+        score: confianca
+      };
+
+      adicionarAoHistorico(info.original, statusNome);
+      lucide.createIcons();
+    }
+
+    function adicionarAoHistorico(url, status) {
+      scanHistory.unshift({
+        url: url,
+        status: status,
+        hora: new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
+      });
+      renderizarHistorico();
+    }
+
+    function renderizarHistorico() {
+      const el = document.getElementById('historico-lista');
+      if (!el) return;
+
+      if (scanHistory.length === 0) {
+        el.innerHTML = '<p class="text-center py-4 text-slate-500">Nenhum link verificado ainda. Digite um link no topo para começar.</p>';
+        return;
+      }
+
+      el.innerHTML = scanHistory.slice(0, 6).map(item => `
+        <div class="flex items-center justify-between p-2.5 rounded-lg bg-deep-900 border border-slate-800">
+          <div class="flex items-center gap-2 truncate pr-2">
+            <span class="w-2 h-2 rounded-full ${
+              item.status === 'SEGURO' ? 'bg-emerald-400' :
+              item.status === 'SUSPEITO' ? 'bg-amber-400' : 'bg-red-500'
+            }"></span>
+            <span class="text-white font-mono truncate">${item.url}</span>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold ${
+              item.status === 'SEGURO' ? 'bg-emerald-950 text-emerald-300 border border-emerald-500/30' :
+              item.status === 'SUSPEITO' ? 'bg-amber-950 text-amber-300 border border-amber-500/30' :
+              'bg-red-950 text-red-300 border border-red-500/30'
+            }">
+              ${item.status}
+            </span>
+            <span class="text-slate-500 text-[11px]">${item.hora}</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    window.limparHistorico = function() {
+      scanHistory = [];
+      renderizarHistorico();
+    };
+
+    window.copiarAlertaWhatsapp = function() {
+      if (!lastResult) return;
+      
+      let msg = '';
+      if (lastResult.status === 'GOLPE') {
+        msg = `🚨 *ALERTA DE GOLPE!* 🚨\n\nEu verifiquei o link *${lastResult.url}* no *ControlZ* e ele foi identificado como *GOLPE PERIGOSO*.\n\n❌ NÃO clique no link!\n❌ NÃO passe códigos de SMS nem faça Pix!\n🗑️ Apague a mensagem imediatamente.`;
+      } else if (lastResult.status === 'SUSPEITO') {
+        msg = `⚠️ *ATENÇÃO: LINK SUSPEITO* ⚠️\n\nVerifiquei o link *${lastResult.url}* no *ControlZ* e a segurança não pôde ser confirmada.\n\nCuidado antes de abrir ou informar qualquer dado pessoal.`;
+      } else {
+        msg = `✅ *LINK SEGURO*\n\nVerifiquei o link *${lastResult.url}* no *ControlZ* e ele é seguro e oficial.`;
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(msg).then(() => {
+          const btn = document.getElementById('btn-copy-alert');
+          const originalText = btn.innerHTML;
+          btn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i> Copiado com Sucesso!';
+          lucide.createIcons();
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            lucide.createIcons();
+          }, 2500);
+        });
+      } else {
+        prompt('Copie o texto abaixo para colar no WhatsApp:', msg);
+      }
+    };
+  </script>
+</body>
+</html>
